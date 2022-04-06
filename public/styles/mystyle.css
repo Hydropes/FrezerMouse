@@ -1,0 +1,371 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+*,
+*::before,
+*::after{
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: border-box;
+}
+a{
+text-decoration: none;
+}
+ul,
+ol,
+li{
+list-style: none;
+}
+img{
+vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+font-weight: inherit;
+font-size: inherit;
+}
+body{
+height: 100%;
+line-height: 1;
+font-size: 14px;
+font-family: Montserrat;
+color:black;
+}
+@font-face {
+    font-family: "Greek";
+    src: url("./fonts/DalekPinpointBold-lr3e.ttf");
+}
+.wrapper{
+min-height: 100vh;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+
+
+
+
+}
+._container{
+    
+    max-width: 1000px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    
+}
+.header {
+    position:relative;
+    width: 100%;
+    left: 0px;
+    top:0px;
+   
+    /* z-index: 50; */
+    }
+.header-container {
+    display: flex;
+    min-height: 104px;
+    flex-direction: column;
+   }
+   /* @media(max-width: 479px){
+    .header__container{
+        min-height: 75px;
+    }
+} */
+
+.header-top{
+    min-height: 50px;
+    padding: 5px 0px;
+    display: flex;
+   align-items: flex-start;
+    
+}
+.header-top__menu {
+    margin: 0px 0px 0px 133px;
+    color: brown;
+    
+}
+@media (max-width: 992px){
+    .header-top__menu {
+
+        margin: 0px 0px 0px 80px;
+    }
+}
+    @media (max-width: 767px){
+    .header-top__menu {
+        margin: 0px 0px 0px 40px;
+    }
+    }
+.header-top__logo{
+     font-size: 24px;
+    font-weight: 700;
+    color: brown;
+    font-family: "Greek";
+     background-color: #252B42;
+     border-radius: 8px;
+     padding: 5px;
+     
+}
+.header__bottom{
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-style: italic;
+    align-items: center;
+    }
+
+
+.menu__list {
+    flex-wrap: wrap;
+    display:  flex;
+    
+}
+.menu__item {
+    border: 1px solid #252B42;;
+    border-radius: 5px;
+    
+    padding: 2px;
+    
+}
+.menu__item:not(:last-child){
+    margin: 0px 21px 0px 0px;
+   
+}
+.menu_link {
+    color: #252B42;
+    font-weight: 600;
+    line-height: calc(24*100%/14);
+}
+/* _______________________MAIN__________________________ */
+.page{
+    margin: 40px 0 0 0;
+    flex-grow: 1;
+   
+}
+.__mouse{
+    width: 100px;
+    position: relative;
+   left: -100px;
+   transition: left 8s;
+}
+.page-container{
+    display: flex;
+    min-height: 300px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.page-left{
+display: flex;
+flex-direction: column;
+justify-content: stretch;
+margin: 0 15px 0  0;
+}
+
+main{
+    }
+.left__inputfields{
+    border: 1px solid #252B42;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px 3px;
+    margin: 5px 0 0 0 ;
+    }
+    ._params{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .params-basic{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .params-basic__fields{
+        padding: 2px 0px;
+    margin: 2px 0;
+    }
+    ._params-input{
+        border: 1px solid #252B42;
+        margin-inline: 5px;
+    }
+  
+   
+
+.right__drawField{
+    background-color: aliceblue;
+    border: 1px solid #252B42;
+    min-width: 300px;
+    display: flex;
+    /* max-height: 292px; */
+    flex-grow: 1;
+    
+    
+}
+
+
+
+button{
+        padding: 5px;
+        background-color: #252B42;
+        color:brown;
+        border: 2px solid #252B42;
+        border-radius: 5px;
+        font-weight: bolder;
+        font-size: 18px;
+        margin: 2px 0px;
+        box-sizing: border-box;
+    }
+    button:hover{
+        cursor: pointer;
+        border: 2px solid #252B42;
+        border-radius: 5px;
+        background: rgb(250, 249, 241);;
+    }
+    .right-buttons{
+       margin: 2px 15px 0  0;
+        display: flex;
+        flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+        }
+
+.page-right{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    flex-grow: 1;
+    flex-basis: 50%;
+    max-width: 600px;
+}
+select{
+    padding: 3px 0;
+    margin: 3px 0;
+}
+.footer{
+    flex-shrink: 0;
+    background-color: #252B42;
+     font-family: "Greek", "Arial", sans-serif;
+    font-size: 18px;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+   }
+   h2{
+       font-size: 18px;
+       font-weight: 800;
+   }
+   h3{
+       font-size: 16px;
+       font-weight: 600;
+   }
+   .emptyfield{
+        background-color: yellow;
+    }
+
+/* @media(max-width: 479px){
+    .header__container{
+        min-height: 75px;
+    }
+} */
+
+/* Cтарый вариант: */
+/* h1{
+    font-family: "Greek", "Arial", sans-serif;
+    font-size: 2em;
+    color: brown;
+    text-align: center;
+} */
+/* body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:  rgb(250, 249, 241);
+    text-align: center;
+    font-size: 18px;
+    */
+/* } */
+/* .description{
+
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    width: 1200px;
+    margin: auto;
+    padding: 5px;
+    font-style: italic;
+    font-size: 150%;
+}
+.mainscreen{
+ 
+  border-radius: 4px;
+   line-height: normal;
+   width: 100%;
+  display: inline-block;
+ 
+}
+#drawField{
+    
+    border: 3px solid black;
+    margin-inline: 10px;
+    width: 500;
+    height: 300;
+    background-color: rgb(250, 241, 228);
+   
+     
+}
+.rightField{
+    display: inline-block;
+    vertical-align: top;
+   
+    margin: 10px;
+    text-align: center;
+}
+.annotations{
+          margin-top: 10px;
+    margin-bottom: 10px;
+    padding-inline: 5px ;
+            border: 2px solid brown;
+            border-radius: 4px;
+        width: 300px;
+        display: inline-block;
+         box-sizing: content-box;
+
+      
+}
+
+    .fields{
+        font-size: 1em;
+        margin: 5px;
+        background-color: white;
+    }
+    .emptyfield{
+        background-color: yellow;
+    }
+    button{
+        margin: 10px;
+        padding: 1em;
+        background-color: rgb(41, 38, 38);
+        color:brown;
+        border-radius: 4px;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    footer{
+     font-family: "Greek", "Arial", sans-serif;
+    font-size: 2em;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(41, 38, 38);
+    }
+    button:hover{
+        cursor: pointer;
+        background: rgb(90, 88, 88);
+    }
+    .contour:hover{
+        cursor: pointer;
+    } */
+    
