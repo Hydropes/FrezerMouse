@@ -1,12 +1,12 @@
 {
-  "name": "frezermouse2",
+  "name": "frezermouse",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "nodemon": "2.0.15"
   },
   "dependencies": {
-    "express": "4.17.3"
+    "express": "4.17.3",
+    "hbs": "^4.2.0"
   }
 }

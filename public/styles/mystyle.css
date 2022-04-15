@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic); */
 *,
 *::before,
 *::after{
@@ -264,6 +264,31 @@ select{
    }
    .emptyfield{
         background-color: yellow;
+    }
+    .contoursList{
+       font-size: 1.2em;
+       display: flex;
+       flex: row;
+       max-width: 600px;
+       flex-wrap: wrap;
+       justify-content: space-evenly
+        
+    }
+    .__contour{
+        background-color: #252B42;
+        color:brown;
+        font-weight: 600;
+        border: 1px solid #252B42;
+        border-radius: 2px;
+        padding: 5px 3px;
+        margin: 3px;
+        max-width: 130px;
+    }
+    .__contour:hover{
+        cursor: pointer;
+        border: 1px solid #252B42;
+        border-radius: 5px;
+        background: rgb(250, 249, 241);
     }
 
 /* @media(max-width: 479px){
