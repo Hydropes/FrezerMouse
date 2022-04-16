@@ -34,7 +34,6 @@ canvas.addEventListener("mousedown", function (e) {
     //Передача данных экземпляру класса
     cont[counter] = new Contour(counter, context);
     cont[counter].setStock(stock);
-    // console.log(cont[counter].pxToMm);
     cont[counter].id = counter;
     cont[counter].setPointsByPx(mouse.x, mouse.y);
 
@@ -79,9 +78,6 @@ canvas.addEventListener("mouseup", function (e) {
     //Присвоение точек экземпляру класса Contour:
     cont[counter].setPointsByPx(mouse.x, mouse.y);
     cont[counter].transformPoints();
-    console.log(
-      `Нужные координаты контура ${cont[counter].id} : ${cont[counter].arrMm}`
-    );
     cont[counter].setViewHTML(newLi);
 
     //Запись координат в массив
@@ -200,7 +196,6 @@ gCode = new GcodeLinear(
   h,
   CNC_type
 );
-console.log(gCode);
 gCode.formMe();
   }else{
     alert('Пожалуйста, нарисуйте контуры')

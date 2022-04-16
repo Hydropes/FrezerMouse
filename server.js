@@ -2,6 +2,8 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import express from 'express';
 import fs from 'fs'
+import hbs from 'hbs'
+
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -9,7 +11,12 @@ const __dirname = path.dirname(__filename);
 const app = express()
 const file = ''
 const jsonParser = express.json();
-// app.use(express.urlencoded({extended:false}))
+
+app.set("view engine", "hbs");
+app.set("views", "public");
+hbs.registerPartials(__dirname + "/public/partials");
+console.log(__dirname);
+
 
 app.use(express.static(path.resolve(__dirname, "public")));
 
@@ -19,8 +26,17 @@ fs.writeFile(`G-codes/${req.body.name}.${req.body.ext}`, req.body.text.join('\n'
 })
 });
 
+app.use('/contacts', (req, res)=>{
+  res.render('contacts.hbs')
+})
+
+app.use("/examples", (req, res) => {
+  res.render("examples.hbs");
+});
+
 app.use("/", function (req, res) {
-   res.sendFile(__dirname + "/public/index.html");
+  res.render("index.hbs");
+  //  res.sendFile(__dirname + "/public/index.html");
 });
 
 

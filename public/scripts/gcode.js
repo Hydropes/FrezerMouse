@@ -40,13 +40,11 @@ export class GcodeLinear {
     this.text.push(`G0 Z${this.zSafe}`);
     this.text.push(`M03 S${this.rotations}`);
     this.arrCont.forEach((el) => {
-      // console.log(el);
       this.text.push(`(contour #${el.id + 1})`);
       this.text.push(`G0 X${el.arrMm[0][0]} Y${el.arrMm[0][1]}`);
       this.text.push(`G0 Z${(this.zCut + GcodeLinear.SAVE_NEAR).toFixed(2)}`);
       this.text.push(`G1 Z${this.zCut} F${this.feed / 5}`);
       this.text.push(`G1 X${el.arrMm[1][0]} Y${el.arrMm[1][1]} F${this.feed}`);
-      // console.log(el.arrMm.length);
       for (let i = 2; i < el.arrMm.length; i++) {
         this.text.push(`X${el.arrMm[i][0]} Y${el.arrMm[i][1]} `);
       }
@@ -68,6 +66,5 @@ export class GcodeLinear {
         text: this.text,
       }),
     });
-    console.log("res=", res);
   }
 }
